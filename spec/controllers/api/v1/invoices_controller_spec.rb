@@ -8,7 +8,7 @@ RSpec.describe Api::V1::InvoicesController do
 
       assert_response :success
       parsed_invoices = JSON.parse(response.body)
-      
+
       expect(parsed_invoices.count).to eq 6
     end
   end
