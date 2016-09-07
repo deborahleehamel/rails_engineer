@@ -11,13 +11,13 @@ two:
   credit_card_number: 45678
   result: failed
   created_at: January 1, 2012
-  updated_at: January 1, 2012
+  updated_at: January 8, 2012
 
 three:
     invoice: one
     credit_card_number: 45678
     result: success
-    created_at: January 1, 2012
+    created_at: January 4, 2012
     updated_at: January 1, 2012
 
 four:
