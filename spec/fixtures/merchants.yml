@@ -1,0 +1,14 @@
+one:
+  name: Evil Corp
+  created_at: Jan 13, 1990
+  updated_at: Jan 20, 1992
+
+two:
+  name: Programmers R Us
+  created_at: Jan 13, 1990
+  updated_at: Jan 20, 1992
+
+three:
+  name: Matel 
+  created_at: Jan 13, 1990
+  updated_at: Jan 20, 1992
