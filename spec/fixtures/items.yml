@@ -3,15 +3,21 @@ one:
   description: stuffed with peanuts, simply delicious
   unit_price: 5
   merchant: one
+  created_at: 2012-03-27 14:53:59
+  updated_at: 2013-03-27 14:53:59
 
 same_name:
   name: M&Ms
   description: Balls of sugar
   unit_price: 5
   merchant: one
+  created_at: 2012-03-27 14:53:59
+  updated_at: 2013-03-27 14:53:59
 
 two:
   name: Skittles
   description: Fruity explosions everywhere
   unit_price: 8
   merchant: two
+  created_at: 2012-05-27 14:53:59
+  updated_at: 2013-04-27 14:53:59  

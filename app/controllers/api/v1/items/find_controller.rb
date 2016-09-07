@@ -1,5 +1,9 @@
 class Api::V1::Items::FindController < ApplicationController
 
+  def index
+    render json: Item.where(item_params)
+  end
+
   def show
     render json: Item.where(item_params).first
   end
@@ -11,7 +15,7 @@ class Api::V1::Items::FindController < ApplicationController
         :id,
         :name,
         :description,
-        :unit_price, 
+        :unit_price,
         :created_at,
         :updated_at,
         :merchant_id
