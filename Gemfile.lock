@@ -85,6 +85,8 @@ GEM
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
+    nyan-cat-formatter (0.11)
+      rspec (>= 2.99, >= 2.14.2, < 4)
     pg (0.18.4)
     pkg-config (1.1.7)
     pry (0.10.4)
@@ -126,6 +128,10 @@ GEM
       ffi (>= 0.5.0)
     responders (2.3.0)
       railties (>= 4.2.0, < 5.1)
+    rspec (3.5.0)
+      rspec-core (~> 3.5.0)
+      rspec-expectations (~> 3.5.0)
+      rspec-mocks (~> 3.5.0)
     rspec-core (3.5.3)
       rspec-support (~> 3.5.0)
     rspec-expectations (3.5.0)
@@ -173,6 +179,7 @@ DEPENDENCIES
   database_cleaner
   launchy
   listen (~> 3.0.5)
+  nyan-cat-formatter
   pg (~> 0.18)
   pry-rails
   puma (~> 3.0)
