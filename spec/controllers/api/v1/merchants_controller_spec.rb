@@ -12,4 +12,17 @@ RSpec.describe Api::V1::MerchantsController do
       expect(parsed_merchants.count).to eq 3
     end
   end
+
+  describe "GET show" do
+    it "can get single instance of merchant" do
+      merchant = merchants(:one)
+      get :show, id: merchant.id
+
+      assert_response :success
+
+      parsed_merchant = JSON.parse(response.body)
+
+      expect(parsed_merchant["name"]).to eq "Evil Corp"
+    end
+  end
 end
