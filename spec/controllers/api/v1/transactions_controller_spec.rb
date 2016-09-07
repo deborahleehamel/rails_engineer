@@ -10,7 +10,7 @@ RSpec.describe Api::V1::TransactionsController do
 
       parsed_transactions = JSON.parse(response.body)
 
-      expect(parsed_transactions.count).to eq 5
+      expect(parsed_transactions.count).to eq 4
     end
   end
 end
