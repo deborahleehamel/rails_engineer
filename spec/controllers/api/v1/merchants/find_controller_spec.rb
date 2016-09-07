@@ -51,10 +51,11 @@ RSpec.describe Api::V1::Merchants::FindController do
       merchant =  merchants(:two)
       get :show, params: { id: merchant.id }
 
-      parsed_merchants = JSON.parse(response.body)
+      parsed_merchant = JSON.parse(response.body)
 
-      expect(parsed_merchants.count).to         eq 1
-      expect(parsed_merchants.first["name"]).to eq "Programmers R Us"
+      expect(parsed_merchant["name"]).to eq "Programmers R Us"
+      expect(parsed_merchant["id"]).to eq 3
+      expect(parsed_merchant["id"]).to eq merchant.id
     end
   end
 end
