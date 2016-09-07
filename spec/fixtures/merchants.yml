@@ -12,3 +12,8 @@ three:
   name: Matel
   created_at: Jan 13, 1990
   updated_at: Jan 20, 1992
+
+four:
+  name: Matel
+  created_at: Jan 13, 1990
+  updated_at: Jan 20, 1992

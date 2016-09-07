@@ -14,7 +14,7 @@ Rails.application.routes.draw do
         get "/find_all", to: "find#index"
       end
       namespace :merchants do
-        get "/find"
+        get "/find_all",  to: "find#index"
       end
     end
   end
