@@ -5,4 +5,12 @@ Rails.application.routes.draw do
       resources :invoices, only: [:index, :show]
     end
   end
+
+  namespace :api do
+    namespace :v1, defaults: {format: :json} do
+      namespace :invoices do
+        get "/find_all", to: "find#index"
+      end
+    end
+  end
 end
