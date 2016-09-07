@@ -10,7 +10,7 @@ RSpec.describe Api::V1::Merchants::FindController do
       parsed_merchants = JSON.parse(response.body)
 
       expect(parsed_merchants.count).to eq 2
-      expect(parsed_merchants.first["name"]).to be "Matel"
+      expect(parsed_merchants.first["name"]).to eq "Matel"
     end
   end
 end
