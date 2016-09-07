@@ -2,6 +2,18 @@ require "rails_helper"
 
 RSpec.describe Api::V1::Items::FindController do
   fixtures :items
+  describe "GET index//Multi-Finders" do
+    it "can get all instances of items by ID" do
+      items = items(:one)
+      get :index, params: { id: item.id }
+
+      parsed_invoices = JSON.parse(response.body)
+
+      expect(parsed_invoices.count).to       eq 1
+      expect(parsed_invoices.first["id"]).to eq 3
+      expect(parsed_invoices.first["id"]).to eq invoice.id
+    end
+  end
   describe "GET show" do
     it "can get a single item based on search" do
       item = items(:two)
