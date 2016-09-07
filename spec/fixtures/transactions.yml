@@ -1,0 +1,28 @@
+one:
+  id: 2
+  invoice: one
+  credit_card_number: 12345
+  result: success
+  created_at: January 1, 2012
+  updated_at: January 1, 2012
+
+two:
+  invoice: one
+  credit_card_number: 45678
+  result: failed
+  created_at: January 1, 2012
+  updated_at: January 1, 2012
+
+three:
+    invoice: one
+    credit_card_number: 45678
+    result: success
+    created_at: January 1, 2012
+    updated_at: January 1, 2012
+
+four:
+    invoice: three
+    credit_card_number: 45678
+    result: success
+    created_at: January 1, 2012
+    updated_at: January 1, 2012
