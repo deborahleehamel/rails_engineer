@@ -1,0 +1,17 @@
+one:
+  name: M&Ms
+  description: stuffed with peanuts, simply delicious
+  unit_price: 5
+  merchant: one
+
+same_name:
+  name: M&Ms
+  description: Balls of sugar
+  unit_price: 5
+  merchant: one
+
+two:
+  name: Skittles
+  description: Fruity explosions everywhere
+  unit_price: 8
+  merchant: two
