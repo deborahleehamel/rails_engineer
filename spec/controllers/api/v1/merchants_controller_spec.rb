@@ -9,14 +9,14 @@ RSpec.describe Api::V1::MerchantsController do
 
       parsed_merchants = JSON.parse(response.body)
 
-      expect(parsed_merchants.count).to eq 3
+      expect(parsed_merchants.count).to eq 5
     end
   end
 
   describe "GET show" do
     it "can get single instance of merchant" do
       merchant = merchants(:one)
-      get :show, id: merchant.id
+      get :show, params: { id: merchant.id }
 
       assert_response :success
 

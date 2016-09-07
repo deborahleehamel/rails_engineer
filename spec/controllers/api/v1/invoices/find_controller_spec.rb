@@ -5,7 +5,7 @@ RSpec.describe Api::V1::Invoices::FindController do
   describe "GET index" do
     it "can get all invoices searched for" do
       invoice = invoices(:one)
-      get :index, status: invoice.status
+      get :index, params: { status: invoice.status }
 
       parsed_invoices = JSON.parse(response.body)
 
@@ -17,7 +17,7 @@ RSpec.describe Api::V1::Invoices::FindController do
   describe "GET show" do
     it "can get a single invoice based on search" do
       invoice = invoices(:two)
-      get :show, status: invoice.status
+      get :show, params: { status: invoice.status }
 
       assert_response :success
 

@@ -17,7 +17,7 @@ RSpec.describe Api::V1::InvoicesController do
   describe "GET show" do
     it "can get a single invoice" do
       invoice = invoices(:one)
-      get :show, id: invoice.id
+      get :show, params: { id: invoice.id }
 
       assert_response :success
 
