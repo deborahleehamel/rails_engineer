@@ -7,13 +7,8 @@ Rails.application.routes.draw do
         get "/find",     to: "find#show"
         get "/random",   to: "random#show"
       end
-    end
-  end
-
-  namespace :api do
-    namespace :v1, defaults: {format: :json} do
       namespace :items do
-        get "/find",     to: "find#show"
+        get "/find", to: "find#show"
       end
     end
   end
