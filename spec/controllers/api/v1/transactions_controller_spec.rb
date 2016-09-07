@@ -23,7 +23,7 @@ RSpec.describe Api::V1::TransactionsController do
 
       parsed_transaction = JSON.parse(response.body)
 
-      expect(parsed_transaction["credit_card_number"]).to eq 12345
+      expect(parsed_transaction["credit_card_number"]).to eq "12345"
       expect(parsed_transaction["id"]).to                 eq 2
     end
   end
