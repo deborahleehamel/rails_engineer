@@ -22,7 +22,7 @@ RSpec.describe Api::V1::MerchantsController do
 
       parsed_merchant = JSON.parse(response.body)
 
-      expect(parsed_merchant["name"]).to            eq "Evil Corp"
+      expect(parsed_merchant["name"]).to eq "Evil Corp"
     end
   end
 end
