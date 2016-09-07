@@ -4,6 +4,7 @@ one:
   updated_at: Jan 20, 1992
 
 two:
+  id: 3
   name: Programmers R Us
   created_at: Jan 13, 1990
   updated_at: Jan 20, 1992
@@ -15,5 +16,10 @@ three:
 
 four:
   name: Matel
+  created_at: Jan 13, 1990
+  updated_at: Jan 20, 1992
+
+five:
+  name: Programmers R Us 2
   created_at: Jan 13, 1990
   updated_at: Jan 20, 1992
