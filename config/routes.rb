@@ -3,12 +3,14 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1, defaults: {format: :json} do
       namespace :invoices do
-        get "/find_all", to: "find#index"
         get "/find",     to: "find#show"
+        get "/find_all", to: "find#index"
         get "/random",   to: "random#show"
       end
       namespace :items do
         get "/find", to: "find#show"
+      namespace :merchants do
+        get "/find_all",  to: "find#index"
       end
     end
   end
