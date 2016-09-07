@@ -5,6 +5,7 @@ RSpec.describe Api::V1::MerchantsController do
   describe "GET index" do
     it "can get all instances of merchant" do
       get :index
+      
       assert_response :success
 
       parsed_merchants = JSON.parse(response.body)
