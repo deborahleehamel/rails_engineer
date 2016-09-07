@@ -1,11 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe Api::V1::MerchantsController do
+RSpec.describe "merchants controller" do
   fixtures :merchants
   describe "GET index" do
     it "can get all instances of merchant" do
-      get :index
-      
+      get "/api/v1/merchants"
       assert_response :success
 
       parsed_merchants = JSON.parse(response.body)
@@ -17,7 +16,7 @@ RSpec.describe Api::V1::MerchantsController do
   describe "GET show" do
     it "can get single instance of merchant" do
       merchant = merchants(:one)
-      get :show, params: { id: merchant.id }
+      get "/api/v1/merchants/#{merchant.id}"
 
       assert_response :success
 
