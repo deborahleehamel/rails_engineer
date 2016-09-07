@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe Api::V1::Merchants::FindController do
   fixtures :merchants
-  describe "GET index" do
+  describe "GET index//Multi-Finders" do
     it "can get all instances of merchant by ID" do
       merchant =  merchants(:two)
       get :index, params: { id: merchant.id }
@@ -43,6 +43,18 @@ RSpec.describe Api::V1::Merchants::FindController do
       expect(parsed_merchants.count).to              eq 3
       expect(parsed_merchants.first["name"]).to      eq "Evil Corp"
       expect(parsed_merchants.last["name"]).to       eq "Matel"
+    end
+  end
+
+  describe "GET show//Single Finders" do
+    it "can get a single instance of merchant by ID" do
+      merchant =  merchants(:two)
+      get :show, params: { id: merchant.id }
+
+      parsed_merchants = JSON.parse(response.body)
+
+      expect(parsed_merchants.count).to         eq 1
+      expect(parsed_merchants.first["name"]).to eq "Programmers R Us"
     end
   end
 end
