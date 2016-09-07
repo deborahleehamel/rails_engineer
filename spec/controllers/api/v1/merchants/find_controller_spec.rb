@@ -13,7 +13,7 @@ RSpec.describe Api::V1::Merchants::FindController do
       expect(parsed_merchants.first["name"]).to eq "Programmers R Us"
     end
 
-    it "can get all instances of merchant by name" do
+    it "can get all instances of merchant by NAME" do
       merchant = merchants(:three)
       get :index, params: { name: merchant.name }
 
@@ -23,7 +23,7 @@ RSpec.describe Api::V1::Merchants::FindController do
       expect(parsed_merchants.first["name"]).to eq "Matel"
     end
 
-    it "can get all instances of merchant by created_at" do
+    it "can get all instances of merchant by CREATED_AT" do
       merchant = merchants(:two)
       get :index, params: { created_at: merchant.created_at }
 
@@ -34,7 +34,7 @@ RSpec.describe Api::V1::Merchants::FindController do
       expect(parsed_merchants.second["name"]).to eq "Programmers R Us 2"
     end
 
-    it "can get all instances of merchant by updated_at" do
+    it "can get all instances of merchant by UPDATED_AT" do
       merchant = merchants(:one)
       get :index, params: { updated_at: merchant.updated_at }
 
@@ -65,6 +65,26 @@ RSpec.describe Api::V1::Merchants::FindController do
       parsed_merchant = JSON.parse(response.body)
 
       expect(parsed_merchant["name"]).to eq "Matel"
+      expect(parsed_merchant["id"]).to   eq merchant.id
+    end
+
+    it "can get a single instance of merchant by NAME" do
+      merchant =  merchants(:three)
+      get :show, params: { name: merchant.name }
+
+      parsed_merchant = JSON.parse(response.body)
+
+      expect(parsed_merchant["name"]).to eq "Matel"
+      expect(parsed_merchant["id"]).to   eq merchant.id
+    end
+
+    it "can get a single instance of merchant by CREATED_AT" do
+      merchant =  merchants(:two)
+      get :show, params: { created_at: merchant.created_at }
+
+      parsed_merchant = JSON.parse(response.body)
+
+      expect(parsed_merchant["name"]).to eq "Programmers R Us"
       expect(parsed_merchant["id"]).to   eq merchant.id
     end
   end
