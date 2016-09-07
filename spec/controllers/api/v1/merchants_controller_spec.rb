@@ -16,7 +16,7 @@ RSpec.describe Api::V1::MerchantsController do
   describe "GET show" do
     it "can get single instance of merchant" do
       merchant = merchants(:one)
-      get :show, id: merchant.id
+      get :show, params: { id: merchant.id }
 
       assert_response :success
 
