@@ -23,8 +23,8 @@ RSpec.describe Api::V1::Invoices::FindController do
 
       parsed_invoice = JSON.parse(response.body)
 
-      expect(parsed_invoice["id"]).to eq invoice.id
-      expect(parsed_invoice["status"]).to eq invoice.status
+      expect(parsed_invoice["id"]).to          eq invoice.id
+      expect(parsed_invoice["status"]).to      eq invoice.status
       expect(parsed_invoice["customer_id"]).to eq invoice.customer_id
       expect(parsed_invoice["merchant_id"]).to eq invoice.merchant_id
     end
