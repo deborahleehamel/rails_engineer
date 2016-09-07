@@ -15,7 +15,7 @@ class Api::V1::Merchants::FindController < ApplicationController
       :id,
       :name,
       :created_at,
-      :updated_at,
+      :updated_at
     )
   end
 end
