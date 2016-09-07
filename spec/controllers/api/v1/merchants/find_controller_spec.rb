@@ -54,8 +54,18 @@ RSpec.describe Api::V1::Merchants::FindController do
       parsed_merchant = JSON.parse(response.body)
 
       expect(parsed_merchant["name"]).to eq "Programmers R Us"
-      expect(parsed_merchant["id"]).to eq 3
-      expect(parsed_merchant["id"]).to eq merchant.id
+      expect(parsed_merchant["id"]).to   eq 3
+      expect(parsed_merchant["id"]).to   eq merchant.id
+    end
+
+    it "can get a single instance of merchant by NAME" do
+      merchant =  merchants(:three)
+      get :show, params: { name: merchant.name }
+
+      parsed_merchant = JSON.parse(response.body)
+
+      expect(parsed_merchant["name"]).to eq "Matel"
+      expect(parsed_merchant["id"]).to   eq merchant.id
     end
   end
 end
