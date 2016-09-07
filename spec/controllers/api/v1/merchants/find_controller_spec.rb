@@ -87,5 +87,15 @@ RSpec.describe Api::V1::Merchants::FindController do
       expect(parsed_merchant["name"]).to eq "Programmers R Us"
       expect(parsed_merchant["id"]).to   eq merchant.id
     end
+
+    it "can get a single instance of merchant by UPDATED_AT" do
+      merchant =  merchants(:two)
+      get :show, params: { updated_at: merchant.updated_at }
+
+      parsed_merchant = JSON.parse(response.body)
+
+      expect(parsed_merchant["name"]).to eq "Programmers R Us"
+      expect(parsed_merchant["id"]).to   eq merchant.id
+    end
   end
 end
