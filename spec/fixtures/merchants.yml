@@ -6,7 +6,7 @@ one:
 two:
   id: 3
   name: Programmers R Us
-  created_at: Jan 13, 1990
+  created_at: Jan 04, 1990
   updated_at: Jan 20, 1992
 
 three:
@@ -21,5 +21,5 @@ four:
 
 five:
   name: Programmers R Us 2
-  created_at: Jan 13, 1990
+  created_at: Jan 04, 1990
   updated_at: Jan 20, 1992
