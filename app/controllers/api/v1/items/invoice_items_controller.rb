@@ -4,7 +4,7 @@ class Api::V1::Items::InvoiceItemsController < ApplicationController
   end
 
   private
-  def item
-    Item.find(params[:id])
-  end
+    def item
+      Item.find(params[:id])
+    end
 end
