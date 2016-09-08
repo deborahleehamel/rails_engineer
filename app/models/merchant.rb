@@ -20,4 +20,12 @@ class Merchant < ApplicationRecord
     .group('id').order('count(transactions) DESC')
     .first
   end
+
+  def revenue
+    (invoices
+    .joins(:transactions, :invoice_items)
+    .where("transactions.result = 'success'")
+    .sum("invoice_items.unit_price * invoice_items.quantity")/100.0)
+    .to_s
+  end
 end

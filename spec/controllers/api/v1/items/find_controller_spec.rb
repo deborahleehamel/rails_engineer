@@ -70,7 +70,7 @@ RSpec.describe Api::V1::Items::FindController do
   describe "GET show//Single Finders" do
     it "can get a single instance of item by attributes" do
       item = items(:two)
-      get :show, { id: item.id }
+      get :show, params: { id: item.id }
 
       assert_response :success
 
