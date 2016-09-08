@@ -1,2 +1,1 @@
-json.extract! @merchant
-json.revenue @revenue
+json.revenue @revenue 
