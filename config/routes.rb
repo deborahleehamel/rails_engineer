@@ -12,8 +12,11 @@ Rails.application.routes.draw do
         get "/:id/customer",      to: "customers#show"
         get "/:id/merchant",      to: "merchants#show"
       end
+      namespace :invoice_items do
+        get "/:id/item",    to: "items#show"
+        get "/:id/invoice", to: "invoices#show"
       namespace :items do
-        get "/find", to: "find#show"
+        get "/find",      to: "find#show"
         get "/find_all",  to: "find#index"
       end
       namespace :merchants do
