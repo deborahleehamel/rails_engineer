@@ -6,6 +6,23 @@ class Merchant < ApplicationRecord
   has_many :transactions,  through: :invoices
   has_many :customers,     through: :invoices
 
+  def revenue
+    (
+    successful_invoices
+    .sum("invoice_items.unit_price * invoice_items.quantity")/100.0
+    )
+    .to_s
+  end
+
+  def revenue_by_date(date)
+    (
+    successful_invoices
+    .where(created_at: date)
+    .sum("invoice_items.unit_price * invoice_items.quantity")/100.0
+    )
+    .to_s
+  end
+
   def customers_pending_invoices
     customers
     .joins("INNER JOIN transactions ON transactions.invoice_id = invoices.id")
@@ -21,21 +38,8 @@ class Merchant < ApplicationRecord
     .first
   end
 
-  def revenue
-    (
-      successful_invoices
-      .sum("invoice_items.unit_price * invoice_items.quantity")/100.0
-    )
-    .to_s
-  end
-
-  def revenue_by_date(date)
-    (
-      successful_invoices
-      .where(created_at: date)
-      .sum("invoice_items.unit_price * invoice_items.quantity")/100.0
-    )
-    .to_s
+  def self.most_items(quantity)
+    byebug
   end
 
   private
