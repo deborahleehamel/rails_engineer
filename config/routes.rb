@@ -29,17 +29,18 @@ Rails.application.routes.draw do
         get "/find_all",     to: "find#index"
         get "/:id/items",    to: "items#index"
         get "/:id/invoices", to: "invoices#index"
+        get "/:id/revenue",  to: "revenues#show"
         get "/:id/customers_with_pending_invoices", to: "customer_pending_invoices#index"
       end
       namespace :transactions do
-        get "/find",      to: "find#show"
-        get "/find_all",  to: "find#index"
+        get "/find",        to: "find#show"
+        get "/find_all",    to: "find#index"
         get "/:id/invoice", to: "invoices#show"
       end
       namespace :customers do
-        get "/find",      to: "find#show"
-        get "/find_all",  to: "find#index"
-        get "/:id/invoices", to: "invoices#index"
+        get "/find",             to: "find#show"
+        get "/find_all",         to: "find#index"
+        get "/:id/invoices",     to: "invoices#index"
         get "/:id/transactions", to: "transactions#index"
       end
     end
