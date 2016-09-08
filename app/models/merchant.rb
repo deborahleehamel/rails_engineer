@@ -39,10 +39,17 @@ class Merchant < ApplicationRecord
   end
 
   def self.most_items(quantity)
-    byebug
+     all_successful_invoices
+    .group("merchants.id")
+    .order("SUM(invoice_items.quantity) DESC")
+    .limit(quantity)
   end
 
   private
+    def self.all_successful_invoices
+      joins(invoices:[:transactions, :invoice_items])
+      .where("transactions.result = 'success'")
+    end
 
     def successful_invoices
       invoices
