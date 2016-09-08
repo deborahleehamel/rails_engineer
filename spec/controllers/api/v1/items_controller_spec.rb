@@ -15,7 +15,7 @@ RSpec.describe Api::V1::ItemsController do
   describe "GET show" do
     it "can get a single item" do
       item = items(:one)
-      get :show, id: item.id
+      get :show, params: { id: item.id }
 
       assert_response :success
 
