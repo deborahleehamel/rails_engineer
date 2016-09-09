@@ -93,7 +93,7 @@ RSpec.describe Api::V1::InvoiceItems::FindController do
       expect(parsed_invoice_item["id"]).to          eq 298486374
       expect(parsed_invoice_item["id"]).to          eq invoice_item.id
       expect(parsed_invoice_item["quantity"]).to    eq 7
-      expect(parsed_invoice_item["unit_price"]).to  eq 6
+      expect(parsed_invoice_item["unit_price"]).to  eq 61111
 
     end
 
@@ -132,14 +132,14 @@ RSpec.describe Api::V1::InvoiceItems::FindController do
 
     it "can get a single instance of invoice by UNIT_PRICE" do
       invoice_item = invoice_items(:two)
-      get :show, params: { unit_price: invoice_item.unit_price }
+      get :show, params: { unit_price: "611.11" }
 
       assert_response :success
 
       parsed_invoice_item = JSON.parse(response.body)
 
       expect(parsed_invoice_item["id"]).to         eq invoice_item.id
-      expect(parsed_invoice_item["unit_price"]).to eq 6
+      expect(parsed_invoice_item["unit_price"]).to eq 61111
       expect(parsed_invoice_item["quantity"]).to   eq 7
     end
 
