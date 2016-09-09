@@ -1,6 +1,6 @@
 class Api::V1::Invoices::TransactionsController < ApplicationController
   def index
-    render json: invoice.transactions
+    @transactions = invoice.transactions
   end
 
   private
