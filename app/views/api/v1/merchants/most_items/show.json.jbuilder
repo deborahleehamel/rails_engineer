@@ -1,1 +1,1 @@
-json.most_items. @most_items
+json.array! @most_items
