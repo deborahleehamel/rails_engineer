@@ -50,12 +50,12 @@ RSpec.describe Api::V1::InvoiceItems::FindController do
 
     it "can get all invoice_items by UNIT_PRICE" do
       invoice_item = invoice_items(:one)
-      get :index, params: { unit_price: invoice_item.unit_price }
+      get :index, params: { unit_price: "911.11" }
 
       parsed_invoice_items = JSON.parse(response.body)
 
       expect(parsed_invoice_items.count).to               eq 1
-      expect(parsed_invoice_items.first["unit_price"]).to eq 9
+      expect(parsed_invoice_items.first["unit_price"]).to eq 91111
     end
 
     it "can get all invoice_items by CREATED_AT" do
