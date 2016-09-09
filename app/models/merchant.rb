@@ -55,6 +55,7 @@ class Merchant < ApplicationRecord
   end
 
   private
+
     def self.all_successful_invoices
       joins(invoices:[:transactions, :invoice_items])
       .where("transactions.result = 'success'")
