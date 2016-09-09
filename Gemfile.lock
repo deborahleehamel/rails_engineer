@@ -62,7 +62,7 @@ GEM
     jbuilder (2.6.0)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
-    json (2.0.1)
+    json (2.0.2)
     launchy (2.4.3)
       addressable (~> 2.3)
     listen (3.0.8)
