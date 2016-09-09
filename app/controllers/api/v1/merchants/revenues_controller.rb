@@ -1,7 +1,7 @@
 class Api::V1::Merchants::RevenuesController < ApplicationController
 
   def index
-    @invoices = Merchant.total_revenue(params[:date])
+    @revenue = Merchant.total_revenue(params[:date])
   end
 
   def show
