@@ -32,7 +32,7 @@ Rails.application.routes.draw do
         get "/find_all",     to: "find#index"
         get "/revenue",      to: "revenues#index"
         get "/most_revenue", to: "most_revenue#index"
-        get "/most_items",   to: "most_items#show"
+        get "/most_items",   to: "most_items#index"
         get "/:id/items",    to: "items#index"
         get "/:id/invoices", to: "invoices#index"
         get "/:id/revenue",  to: "revenues#show"

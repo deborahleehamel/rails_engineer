@@ -1,4 +1,5 @@
 class Api::V1::Items::FindController < ApplicationController
+  before_action :format_price
 
   def index
     render json: Item.where(item_params)
@@ -22,7 +23,7 @@ class Api::V1::Items::FindController < ApplicationController
       )
     end
 
-    def convert_to_integer
+    def format_price
       params[:unit_price] = params[:unit_price].delete(".").to_i if params[:unit_price]
     end
 

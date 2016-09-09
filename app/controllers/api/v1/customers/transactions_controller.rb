@@ -1,7 +1,7 @@
 class Api::V1::Customers::TransactionsController < ApplicationController
 
   def index
-    render json: customer.transactions
+    @transactions = customer.transactions
   end
 
   private
