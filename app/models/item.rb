@@ -18,4 +18,18 @@ class Item < ApplicationRecord
     .order("sum(invoice_items.quantity) DESC")
     .first[:created_at]
   end
+
+  def self.most_items(quantity)
+    successful_invoices
+    .select("items.id, name, COUNT(invoice_items.quantity) AS items_sold")
+    .group("id")
+    .order("items_sold DESC")
+    .limit(quantity)
+  end
+
+  private
+    def self.successful_invoices
+      joins(invoices: [:invoice_items, :transactions])
+      .where("transactions.result = 'success'")
+    end
 end
