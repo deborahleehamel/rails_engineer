@@ -40,10 +40,11 @@ Rails.application.routes.draw do
         get "/:id/invoice", to: "invoices#show"
       end
       namespace :customers do
-        get "/find",             to: "find#show"
-        get "/find_all",         to: "find#index"
-        get "/:id/invoices",     to: "invoices#index"
-        get "/:id/transactions", to: "transactions#index"
+        get "/find",                  to: "find#show"
+        get "/find_all",              to: "find#index"
+        get "/:id/invoices",          to: "invoices#index"
+        get "/:id/transactions",      to: "transactions#index"
+        get "/:id/favorite_merchant", to: "favorite_merchant#index"
       end
     end
   end
