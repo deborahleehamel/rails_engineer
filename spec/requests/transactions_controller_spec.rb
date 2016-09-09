@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe Api::V1::TransactionsController do
+RSpec.describe "transactions controller" do
   fixtures :transactions
   describe "GET index" do
     it "can get all instances of transaction" do
-      get :index
+      get "/api/v1/transactions"
 
       assert_response :success
 
@@ -17,7 +17,7 @@ RSpec.describe Api::V1::TransactionsController do
   describe "GET show" do
     it "can get single instance of transaction" do
       transaction = transactions(:one)
-      get :show, params: { id: transaction.id }
+      get "/api/v1/transactions/#{transaction.id}"
 
       assert_response :success
 
