@@ -1,6 +1,6 @@
 class Api::V1::Customers::FavoriteMerchantsController < ApplicationController
   def show
-    @merchant = customer.fav_merchant
+    @merchant = customer.favorite_merchant
   end
 
   private
