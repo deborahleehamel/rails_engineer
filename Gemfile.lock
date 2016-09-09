@@ -53,6 +53,7 @@ GEM
     concurrent-ruby (1.0.2)
     database_cleaner (1.5.3)
     diff-lcs (1.2.5)
+    docile (1.1.5)
     erubis (2.7.0)
     ffi (1.9.14)
     globalid (0.3.7)
@@ -61,6 +62,7 @@ GEM
     jbuilder (2.6.0)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
+    json (2.0.1)
     launchy (2.4.3)
       addressable (~> 2.3)
     listen (3.0.8)
@@ -147,6 +149,11 @@ GEM
     rspec-support (3.5.0)
     shoulda-matchers (3.1.1)
       activesupport (>= 4.0.0)
+    simplecov (0.12.0)
+      docile (~> 1.1.0)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.0)
     slop (3.6.0)
     sprockets (3.7.0)
       concurrent-ruby (~> 1.0)
@@ -183,6 +190,7 @@ DEPENDENCIES
   responders
   rspec-rails
   shoulda-matchers
+  simplecov
   tzinfo-data
 
 BUNDLED WITH
