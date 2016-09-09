@@ -15,13 +15,14 @@ Rails.application.routes.draw do
       namespace :invoice_items do
         get "/find",              to: "find#show"
         get "/find_all",          to: "find#index"
-        get "/:id/item",    to: "items#show"
-        get "/:id/invoice", to: "invoices#show"
+        get "/:id/item",          to: "items#show"
+        get "/:id/invoice",       to: "invoices#show"
       end
       namespace :items do
         get "/find",              to: "find#show"
         get "/find_all",          to: "find#index"
         get "/most_items",        to: "most_items#index"
+        get "/most_revenue",      to: "most_revenues#index"
         get "/:id/invoice_items", to: "invoice_items#index"
         get "/:id/merchant",      to: "merchants#show"
         get "/:id/best_day",      to: "best_day#show"
