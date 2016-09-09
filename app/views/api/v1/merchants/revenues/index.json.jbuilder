@@ -1,1 +1,1 @@
-json.total_revenue @invoices
+json.total_revenue @revenue

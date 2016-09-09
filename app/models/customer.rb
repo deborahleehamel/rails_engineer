@@ -6,7 +6,7 @@ class Customer < ApplicationRecord
   has_many :merchants,    through: :invoices
   has_many :transactions, through: :invoices
 
-  def fav_merchant
+  def favorite_merchant
     merchants.all_successful_invoices
     .group("merchants.id")
     .select("merchants.id, merchants.name, COUNT(transactions.id) AS trans_amount")
