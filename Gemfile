@@ -5,6 +5,8 @@ gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
 gem 'responders'
 gem 'jbuilder', '~> 2.6'
+gem 'simplecov', :require => false, :group => :test
+
 
 group :development, :test do
   gem 'byebug', platform: :mri

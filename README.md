@@ -27,7 +27,7 @@ To resolve this issue, run:
 ```
 then run
 ```
-rake csv:import_all
+rake all_data:import
 ```
 
 ## Test Suite
