@@ -1,0 +1,18 @@
+one:
+  first_name: Charles
+  last_name: Guy
+  created_at: January 1, 2011
+  updated_at: January 2, 2011
+
+two:
+  id: 3
+  first_name: Eloise
+  last_name: Pepper
+  created_at: January 1, 2011
+  updated_at: January 2, 2011
+
+three:
+  first_name: Eloise
+  last_name: Pepper
+  created_at: January 1, 2011
+  updated_at: January 2, 2011
