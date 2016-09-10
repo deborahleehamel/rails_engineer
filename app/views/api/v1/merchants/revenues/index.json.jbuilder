@@ -1,1 +1,1 @@
-json.total_revenue @revenue
+json.total_revenue format_price(@revenue)

@@ -1,4 +1,5 @@
 class Api::V1::Merchants::RevenuesController < ApplicationController
+  include ApplicationHelper
 
   def index
     @revenue = Merchant.total_revenue(params[:date])
