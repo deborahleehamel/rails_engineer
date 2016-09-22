@@ -8,7 +8,7 @@ git clone https://github.com/deborahleehamel/rails_engineer.git
 ```
 then run
 ```
-cd rails_engine
+cd rails_engineer
 ```
 Run `bundle` and then run the following commands from your command line to set up and seed your data.
 
